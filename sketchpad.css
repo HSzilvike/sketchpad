@@ -1,0 +1,67 @@
+html * {
+
+	-webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+
+body {
+
+	background-color: red;
+	
+}
+
+#container {
+
+	background-color: white;
+	width: 964px;
+	height: 964px;
+	margin: 0px auto 70px auto;
+	border: 2px solid black;
+	border-radius: 10px;
+	overflow: hidden;
+	
+
+
+
+}
+
+.squarediv {
+
+	width: 60px;
+	height: 60px;
+	border-top: 1px solid lightgrey;
+	border-left: 1px solid lightgrey;
+	float: left;
+
+}
+
+.highlight {
+
+	background-color: grey;
+}
+
+
+#buttonarea {
+	margin: 40px auto 5px auto;
+	width: 200px;
+	height: 70px;
+
+}
+
+#usergrid {
+
+	background-color: white;
+	height: 50px;
+	width: 220px;
+	border-radius: 10px;
+	
+	
+}
