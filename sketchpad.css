@@ -33,6 +33,7 @@ body {
 
 }
 
+
 .squarediv {
 
 	width: 60px;
@@ -51,10 +52,22 @@ body {
 
 #buttonarea {
 	margin: 40px auto 5px auto;
-	width: 200px;
+	width: 600px;
 	height: 70px;
+	text-align: center;
 
 }
+
+#pencil {
+
+	width: 100px;
+	height: 50px;
+	border-radius: 40px;
+	background-color: lightgrey;
+	float: left;
+	white-space: normal;
+}
+
 
 #usergrid {
 
@@ -64,4 +77,16 @@ body {
 	border-radius: 10px;
 	
 	
+}
+
+#color {
+
+	width: 100px;
+	height: 50px;
+	border-radius: 40px;
+	border:3px solid orange;
+	background-color: rgb(40, 229, 217);
+	color: rgb(200, 9, 101);
+	float: right;
+	white-space: normal;
 }
