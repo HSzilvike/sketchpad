@@ -31,11 +31,18 @@ $('.squarediv').on('mouseenter',function () {
 	$('#pencil').on('click', function() {
 
 		$('.squarediv').removeClass("highlight");
-		$('.squarediv').css({"background-color":""});
+		$('.squarediv').css({"background-color":"white"});
+		$('.squarediv').css({"filter":"brightness(100%)"});
 
 			$('.squarediv').on('mouseenter',function () {
 
-			$(this).css({"background-color":"grey"});
+			$(this).css({"background-color":"white"});
+			var currentbright = +$(this).css("filter").replace(/[^0-9]/g,'');
+
+
+			$(this).css({"filter":changebright(currentbright)});
+			console.log($(this).css("filter"));
+
 
 
 	});
@@ -46,11 +53,13 @@ $('.squarediv').on('mouseenter',function () {
 	$('#color').on('click', function() {
 
 			$('.squarediv').removeClass("highlight");
-			$('.squarediv').css({"background-color":""});
+			$('.squarediv').css({"background-color":"white"});
+			$('.squarediv').css({"filter":"brightness(100%)"});
 
 			$('.squarediv').on('mouseenter',function () {
 
 			$(this).css({"background-color": randomcolor()});
+
 
 			});
 
@@ -91,3 +100,20 @@ var rgb3 = Math.floor(Math.random() * 255);
 return "rgb("+rgb1+ ","+ rgb2+","+ rgb3 +")";
 
 };
+
+
+
+
+var changebright = function(currentbright) {
+
+
+	if (currentbright>0) {
+
+	 var newbright = currentbright - 10;
+	 console.log(currentbright);
+
+	 return "brightness("+newbright+"%)";
+
+	}
+
+}

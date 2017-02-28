@@ -3,6 +3,7 @@ html * {
 	-webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
 }
 
 *, *:before, *:after {
@@ -46,7 +47,7 @@ body {
 
 .highlight {
 
-	background-color: grey;
+	background-color: rgba(128,128,128,1);
 }
 
 
