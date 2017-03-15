@@ -31,17 +31,19 @@ $('.squarediv').on('mouseenter',function () {
 	$('#pencil').on('click', function() {
 
 		$('.squarediv').removeClass("highlight");
-		$('.squarediv').css({"background-color":"white"});
-		$('.squarediv').css({"opacity":"1"});
+		$('.squarediv').css({"background-color":"black"});
+		$('.squarediv').css({"opacity":"0"});
 
 			$('.squarediv').on('mouseenter',function () {
 
-			$(this).css({"background-color":"white"});
-			var currentbright = +$(this).css("filter").replace(/[^0-9]/g,'');
+			$(this).css({"background-color":"black"});
+
+			var currentbright = +$(this).css("opacity");
+			console.log(currentbright);
 
 
-			$(this).css({"filter":changebright(currentbright)});
-			console.log($(this).css("filter"));
+			$(this).css({"opacity":changebright(currentbright)});
+			console.log($(this).css("opacity"));
 
 
 
@@ -54,7 +56,7 @@ $('.squarediv').on('mouseenter',function () {
 
 			$('.squarediv').removeClass("highlight");
 			$('.squarediv').css({"background-color":"white"});
-			$('.squarediv').css({"filter":"brightness(100%)"});
+			$('.squarediv').css({"opacity":"1"});
 
 			$('.squarediv').on('mouseenter',function () {
 
@@ -107,12 +109,11 @@ return "rgb("+rgb1+ ","+ rgb2+","+ rgb3 +")";
 var changebright = function(currentbright) {
 
 
-	if (currentbright>0) {
-
-	 var newbright = currentbright - 10;
+	if (currentbright<1) {
+	 var newbright = currentbright + 0.1;
 	 console.log(currentbright);
 
-	 return "brightness("+newbright+"%)";
+	 return newbright;
 
 	}
 
